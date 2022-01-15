@@ -18,14 +18,14 @@ public class Main {
        System.out.println("age");
        String age = scanner.nextLine();
 
-        int newAge= Integer.parseInt(age);
+        int newAge= Integer.parseInt(age)+2;
         //System.out.println(newAge+2);
 
        // String agenew = String.valueOf(age);
        // System.out.println(agenew+2);
         int newCode =Integer.parseInt(nationalCode);
 
-        System.out.println(" your name is " +name  + "and your lastName is "+ lastName +  "and your age is " + age +  " and newAge+2 "+ newAge+2 +  " and newCode "+ newCode) ;
+        System.out.println(" your name is " +name  + "and your lastName is "+ lastName +  "and your age is " + age +  " and newAge+2 "+ newAge +  " and newCode "+ newCode) ;
     }
 }
 
