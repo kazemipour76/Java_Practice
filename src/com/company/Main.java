@@ -7,23 +7,55 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ArrayList<Integer> integers = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("for + enter 1");
+        System.out.println("for - enter 2");
+        System.out.println("for * enter 3");
+        System.out.println("for / enter 4");
 
-        integers.add(12);
-        integers.add(20);
-        integers.add(30);
-        integers.add(40);
+        int x ;
+        int y ;
 
-        for (int i:integers){
-            System.out.println(i);
+        while (true) {
+            System.out.println("enter action");
+            int ans = scanner.nextInt();
+            switch (ans) {
+                case 1:
+                    System.out.println("enter number1");
+                    x=scanner.nextInt();
+                    System.out.println("enter number1");
+                    y=scanner.nextInt();
+                    x = x + y;
+                    System.out.println("ans is " + x);
+                    break;
+                case 2:
+                    System.out.println("enter number1");
+                    x=scanner.nextInt();
+                    System.out.println("enter number1");
+                    y=scanner.nextInt();
+                    x = x - y;
+                    System.out.println("ans is " + x);
+                    break;
+                case 3:
+                    System.out.println("enter number1");
+                    x=scanner.nextInt();
+                    System.out.println("enter number1");
+                    y=scanner.nextInt();
+                    x = x * y;
+                    System.out.println("ans is " + x);
+                    break;
+
+                case 4:
+                    System.out.println("enter number1");
+                    x=scanner.nextInt();
+                    System.out.println("enter number1");
+                    y=scanner.nextInt();
+                    x = x / y;
+                    System.out.println("ans is " + x);
+                    break;
+            }
         }
-        System.out.println("----------------------");
-        for(int i=0;i<=10;i++){
-            System.out.println(i);
-        }
+
     }
-
-
-
 }
 
