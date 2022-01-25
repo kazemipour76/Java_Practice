@@ -1,40 +1,67 @@
 package oop;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
-      //  Mobile mobile1 = new Mobile();
-       // mobile1.camera=13;
-       // mobile1.company="samsung";
-       // mobile1.model="j2016";
-       // mobile1.name="galaxy j7";
-       // mobile1.price=200000;
-
-       // System.out.println("Camera is "+mobile1.camera);
-       // System.out.println("company is "+mobile1.company);
-       // System.out.println("model is "+mobile1.model);
-       // System.out.println("name is "+mobile1.name);
-       // System.out.println("price is "+mobile1.price);
-
         Scanner scanner = new Scanner(System.in);
-        System.out.println(  "enter code");
-        int code=scanner.nextInt();
-        System.out.println(  "enter age");
-        int age=scanner.nextInt();
 
-        System.out.println(  "enter name");
-        String name=scanner.next();
-        System.out.println(  "enter family");
-        String family=scanner.next();
-        Person person = new Person(code,age,name,family);
+        ArrayList<Person> personArrayList = new ArrayList<>();
 
-        System.out.println(  "age is "+person.age);
-        System.out.println( "code is "+ person.code);
-        System.out.println(  "name is "+person.name);
-        System.out.println( "family is "+ person.family);
+
+        while (true) {
+            System.out.println("add user enter number 1");
+            System.out.println("search user enter number 2");
+            System.out.println("show all user enter number 3");
+            System.out.println("exit enter number 4");
+            int ans = scanner.nextInt();
+            switch (ans) {
+                case 1:
+                    Person person = new Person();
+                    System.out.println("enter user name");
+                    person.setName(scanner.next());
+                    System.out.println("enter user family");
+                    person.setFamily(scanner.next());
+                    System.out.println("enter user age");
+                    person.setAge(scanner.nextInt());
+                    personArrayList.add(person);
+                    break;
+                case 2:
+                    System.out.println("enter user name for search");
+                    String name = scanner.next();
+                    System.out.println("enter user family for search");
+                    String family = scanner.next();
+
+                    for (Person person1 : personArrayList) {
+                        if (person1.getName().equals(name) || person1.getFamily().equals(family)) {
+                            System.out.println("found " + person1.getName() + " " + person1.getFamily());
+                        } else {
+                            System.out.println("not found in " + person1.getName() + " " + person1.getFamily());
+                        }
+                    }
+                    break;
+                case 3:
+                    for (Person person1 : personArrayList) {
+                        System.out.println("user name is " + person1.getName());
+                        System.out.println("user family is" + person1.getFamily());
+                        System.out.println("user age is " + person1.getAge());
+                        System.out.println("____________________________________");
+
+                    }
+                    break;
+
+                case 4:
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("is default1");
+
+            }
+        }
+
 
     }
 }

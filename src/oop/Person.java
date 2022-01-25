@@ -3,16 +3,39 @@ package oop;
 public class Person {
 
 
-    public Person(int code ,int age,String name,String family){
-        this.age=age;
-        this.code=code;
-        this.name=name;
-        this.family=family;
+    public Person(){
+
     }
 
-    public int code;
-    public int age;
-    public String name;
-    public String family;
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getFamily() {
+        return family;
+    }
+
+
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setFamily(String family) {
+        this.family = family;
+    }
+
+    private int age;
+    private String name;
+    private String family;
 
 }
